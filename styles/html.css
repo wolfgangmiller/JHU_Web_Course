@@ -1,0 +1,19 @@
+.main-header {
+  display: flex;
+}
+.main-img {
+  width: 36px;
+}
+.main-img img {
+  width: 100%;
+}
+.content-wrapper {
+  width: 20vw;
+  margin-top: 1rem;
+  border: 2px solid tomato;
+  padding: 1rem;
+  box-shadow: 10px 5px 5px darkgray;
+}
+.content-wrapper ul {
+  padding-left: 2rem;
+}
