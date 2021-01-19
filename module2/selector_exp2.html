@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector Pseudo Classes</title>
+  <style>
+    /* Creating navbar */
+    header li {
+      list-style: none;
+    }
+    header ul {
+      display: flex;
+    }
+    header a {
+      width: 100px;
+      display: block;
+      color: navy;
+      background-color: lightskyblue;
+      text-decoration: none;
+      border: 1px solid blue;
+      text-align: center;
+      padding: 5px;
+      margin: 5px;
+    }
+    header a:hover, a:active {
+      color: lightskyblue;
+      background-color: navy;
+    }
+
+    /* Using nth pseudo selector */
+section {
+  width: 25vw;
+}   
+section div:nth-child(3) {
+  color: greenyellow;
+}
+
+section div:nth-child(odd) {
+  background-color: gray;
+}
+section div:nth-child(2):hover {
+  background-color: green;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <h1> Pseudo Classes Selectors</h1>
+
+  <p>Creating navbar using unordered list</p>
+  <header>
+    <ul>
+      <li><a href="https://https://news.google.com" class="nav-link" >Google News</a></li>
+      <li><a href="https://maps.google.com">Google Maps</a></li>
+      <li><a href="https://drivegoogle.com">Google Drive</a></li>
+    </ul>
+  </header>
+
+  <h1>Using nth pseudo selector: </h1>
+  <section>
+    <div>DIV 1</div>
+    <div>DIV 2</div>
+    <div>DIV 3</div>
+  </section>
+
+</body>
+</html>

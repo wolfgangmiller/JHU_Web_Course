@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector Examples</title>
+  <style>
+    .green {
+      color: green;
+    }
+    p.green {
+      font-style: italic;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    section > article {
+      color: lightskyblue;
+    }
+    section li{
+      color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selector Examples</h1>
+  <h2 class="green">Selector has class="green" for color</h2>
+  <p>
+    P element no class assign.
+  </p>
+  <p class="green">This is P with CLASS="green", but using p.green as selector w/ italic</p>
+  <div class="green yellow">
+    Div with both green and yellow classes.
+  </div>
+  <h1>Child Selector</h1>
+  <section>
+    <h2>Subheading 1</h2>
+    <div>
+      <article>ARTICLE which inside DIV, which is inside SECTION  ARTICLE not a direct child of SECTION</article>
+    </div>
+  </section>
+  <h2>Subheading 2</h2>
+  <section>
+    <article>ARTICLE as a direct child of the SECTION element. Using 'section > article' any article element which is a direct child of a section element,i.e., any article element whose immediate parent is a section element.</article>
+  </section>
+  <h1>Descendant Selector</h1>
+  <section>
+    Using 'section li' as selector :
+    <ul>
+      <li>Article 1 is in section element</li>
+    </ul>
+  </section>
+  <article>
+    Shopping List:
+    <ul>
+      <li>Cookies are in article element</li>
+    </ul>
+  </article>
+</body>
+</html>
