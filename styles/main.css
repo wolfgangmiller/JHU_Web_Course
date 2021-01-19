@@ -32,7 +32,7 @@
   transition: color 1s;
 }
 .nav-link:hover {
-  border-bottom: 1px solid brown;
+  border-bottom: 1px solid white;
 }
 .nav-link:hover a {
   color: whitesmoke;
