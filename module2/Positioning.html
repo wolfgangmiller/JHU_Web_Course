@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/wolftrack.ico" type="image/x-icon">
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    h1{
+      margin-bottom: 25px;
+    }
+    .section-left, .section-right{
+      width: 50%;
+      border: 1px solid darkgrey;
+      margin: 10px;
+      position: relative;
+    }
+    .section-content{
+      margin-top: 30px;
+      padding: 5px 15px;
+    }
+    .section-title{
+      width: 100px;
+      height: 25px;
+      background-color: gainsboro;
+      border: 1px solid darkgrey;
+      margin-bottom: 5px;
+      text-align: center;
+      position: relative;
+      top: -1px;
+      float: right;
+      
+    }
+    .box {
+      width: 100px;
+      height: 25px;
+      background-color: rgb(195, 188, 240);
+      text-align: center;
+      position: absolute;
+      top: 50px;
+      left: 25px;
+    }
+  </style>
+  <title>Positioning</title>
+</head>
+<body>
+  <h1>Positioning: Static, Relative, and Absolute</h1>
+  <div class="container">
+    <section class="section-left">
+      <div class="section-title">Section 1</div>
+      <p class="section-content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam expedita possimus itaque temporibus ullam dolor hic cupiditate voluptatem libero dolore corporis excepturi, praesentium at, vitae asperiores culpa, vero minima pariatur?
+      </p>
+    </section>
+    <section class="section-right">
+      <div class="section-title">Section 2</div>
+      <p class="section-content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam expedita possimus itaque temporibus ullam dolor hic cupiditate voluptatem libero dolore corporis excepturi, praesentium at, vitae asperiores culpa, vero minima pariatur?
+      </p>
+      <div class="box">Absolute</div>
+    </section>
+    <section class="notes">
+      <h2>Notes</h2>
+      <p>Must have position: relative before absolute (default relative element is html)</p>
+    </section>
+  </div>
+</body>
+</html>

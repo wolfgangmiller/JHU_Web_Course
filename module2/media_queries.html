@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/wolftrack.ico" type="image/x-icon">
+  <style>
+    /* Resets */
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base style */
+    .container{
+      width: 90%;
+      margin: 0 auto;
+      border: 1px solid tomato;
+    }
+    h1{
+      margin-bottom: 25px;
+    }
+    .section-left, .section-right{
+      /* width: 50%; */
+      border: 1px solid darkgrey;
+      position: relative;
+    }
+    .section-content{
+      margin-top: 30px;
+      padding: 5px 15px;
+    }
+    .section-title{
+      width: 100px;
+      height: 25px;
+      background-color: gainsboro;
+      border: 1px solid darkgrey;
+      margin-bottom: 5px;
+      text-align: center;
+      position: relative;
+      top: -1px;
+      float: right;
+      
+    }
+    .notes{
+      border: 1px solid darkgrey;
+      margin: 0 auto;
+      padding: 5px 15px;
+      }
+    
+    /* Media Queries */
+    @media (max-width:599px) {
+      
+      .section-left, .section-right {
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: rgb(155, 186, 243);
+      }
+      .notes{
+        width: 100%;
+        margin: auto;
+      }
+    }
+    @media (min-width: 600px) and (max-width: 999px) {
+      .section-left, .section-right {
+        background-color: rgb(178, 250, 178);
+        margin-bottom: 10px;
+      }
+      .section-left{
+        width: 45%;
+        float: left;
+        
+      }
+      .section-right{
+        width: 45%;
+        float: right;
+      }
+      .notes{
+        clear: both;
+        width: 100%;
+      }
+    }
+    @media (min-width: 1000px) {
+      .section-left{
+        background-color: rgb(250, 195, 224);
+        width: 30%;
+        margin-left: 1.5em;
+        float: left;
+      }
+      .section-right{
+        background-color: rgb(250, 195, 224);
+        width: 30%;
+        margin-left: 1.5em;
+        float: left;
+      }
+      .notes{
+        width: 30%;
+        margin-left: 1.5em;
+        float: left;
+      }
+    }
+  </style>
+  <title>Media Queries</title>
+</head>
+<body>
+    <h1>Using Media Queries</h1>
+    <div class="container">
+      <section class="section-left">
+        <div class="section-title">Section 1</div>
+        <p class="section-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam expedita possimus itaque temporibus ullam dolor hic cupiditate voluptatem libero dolore corporis excepturi, praesentium at, vitae asperiores culpa, vero minima pariatur?
+        </p>
+      </section>
+      <section class="section-right">
+        <div class="section-title">Section 2</div>
+        <p class="section-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam expedita possimus itaque temporibus ullam dolor hic cupiditate voluptatem libero dolore corporis excepturi, praesentium at, vitae asperiores culpa, vero minima pariatur?
+        </p>
+      </section>
+      <section class="notes">
+        <h2>Notes:</h2>
+        <p>Best to start with smallest size and work up</p>
+        <p>Used container div to center on page</p>
+        <P>Remember margin-top collapses w/ float, use bottom</P>
+        <P>Used em to try to center on large display</P>
+        <p>Better to use flex than float</p>
+      </section>
+    </div>
+</body>
+</html>

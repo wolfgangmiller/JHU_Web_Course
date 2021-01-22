@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../images/wolftrack.ico" type="image/x-icon">
+	<style>
+		.container{
+			background-color: gainsboro;
+		}
+		p {
+			float: left;
+		}
+		.pg1{
+			background-color: rgb(247, 222, 82);
+			width: 50px;
+			height: 50px;
+			border: 1px solid darkgreen;
+			margin: 5px;
+			float: right;
+		}
+		.pg2{
+			background-color: rgb(190, 240, 114);
+			width: 50px;
+			height: 50px;
+			border: 1px solid darkgreen;
+			margin: 5px;
+		}
+		.pg3{
+			background-color: lawngreen;
+			width: 50px;
+			height: 50px;
+			border: 1px solid darkgreen;
+			margin: 5px;
+			clear: right;
+		}
+		.pg4{
+			background-color: mediumseagreen;
+			width: 50px;
+			height: 50px;
+			border: 1px solid darkgreen;
+			margin: 5px;
+		}
+		section{
+			clear: left;
+			margin: 5px;
+		}
+	</style>
+	<title>Position Float</title>
+</head>
+<body>
+	<h1>Position Examples</h1> 
+	<div class="container">
+		<p class="pg1"></p>
+		<p class="pg2"></p>
+		<p class="pg3"></p>
+		<p class="pg4"></p>
+		<section>
+			<h2>Notes:</h2>
+			<div>With floats the browser take the element out of the normal document flow.</div> 
+			<div>Top margin does not collapse on floated element</div>
+			<div>Use clear on section to prevent floats for collapsing section</div>
+			<div>Use clear on box 3 to prevent box 2 from floating to the left of it.</div>
+		</section>
+	</div>
+</body>
+</html>

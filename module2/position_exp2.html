@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../images/wolftrack.ico" type="image/x-icon">
+	<style>
+    *{
+      box-sizing: border-box;
+    }
+    span{
+      color: darkgreen;
+      font-weight: bold;
+    }
+		.container{
+			background-color: gainsboro;
+    }
+		.column1{
+			background-color: rgb(247, 222, 82);
+			width: 50%;
+      border: 1px solid darkgreen;
+      padding: 10px;
+      float: left;
+		
+		}
+		.column2{
+			background-color: rgb(190, 240, 114);
+			width: 50%;
+      border: 1px solid darkgreen;
+      padding: 10px;
+      float: right;
+		}
+
+		.notes{
+      clear: both;
+			margin: 5px;
+		}
+	</style>
+	<title>Two Column Layout</title>
+</head>
+<body>
+	<h1>Two Column Layout</h1> 
+	<div class="container">
+    <section class="column1"><span>Column 1</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus molestias voluptas, soluta quasi deleniti aliquid sit ab nisi eveniet non deserunt, fuga sequi. Voluptatibus, assumenda.Facilis minus corporis laudantium vel harum nesciunt sequi distinctio quam assumenda? Vitae libero asperiores accusamus magnam voluptates, molestias soluta dolor possimus amet illum nostrum alias?</section>
+    <section class="column2"><span>Column 2</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus molestias voluptas, soluta quasi deleniti aliquid sit ab nisi eveniet non deserunt, fuga sequi. Voluptatibus, assumenda.Facilis minus corporis laudantium vel harum nesciunt sequi distinctio quam assumenda? Vitae libero asperiores accusamus magnam voluptates, molestias soluta dolor possimus amet illum nostrum alias? deleniti aliquid sit ab nisi eveniet non deserunt, fuga sequi. Voluptatibus, assumenda.Facilis minus corporis laudantium vel harum nesciunt sequi distinctio quam assumenda? Vitae libero asperiores accusamus magnam voluptates, molestias soluta dolor possimus amet illum nostrum alias?</section>
+		<div class="notes">
+			<h2>Notes:</h2>
+			<div>At 50% width box-sizing prevent second box to float to the right of first</div> 
+			<div>Set box-sizing to border-box rather than the default of content-box</div>
+			<div>When Column 2 is floated to right it's below Column 1</div>
+			<div>Float Column 1 to left and Column 2 can be floated to right</div>
+			<div>Be sure to use clear: both on next element to resume normal doc flow</div>
+			<div>Be sure not to use absolute height so content does not overflow on resizing</div>
+		</div>
+	</div>
+</body>
+</html>
