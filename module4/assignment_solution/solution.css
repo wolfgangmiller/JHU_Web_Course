@@ -1,0 +1,23 @@
+/* Browser reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*  Base font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Base style */
+body {
+  font-family: "Roboto", sans-serif;
+}
+.header-page {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.header-page-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
