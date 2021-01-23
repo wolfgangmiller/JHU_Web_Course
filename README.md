@@ -15,3 +15,7 @@ The module covers some basics of interacts with a client when managing a web sit
 ## Module 4: Introduction to Javascript
 
 The module covers the fundamentals of the Javascript language from common language constructs and Javascript types to objects, functions, arrays, closures, and scope isolation.
+
+https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome
+
+https://wolfgangmiller.github.io/JHU_Web_Course/
