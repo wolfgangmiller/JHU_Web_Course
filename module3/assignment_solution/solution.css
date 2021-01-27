@@ -12,12 +12,85 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .header-page {
-  padding-left: 20px;
-  padding-top: 20px;
-}
-.header-page-title {
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 2rem;
+  padding: 25px;
   text-align: center;
+}
+/* Assignment */
+.header {
+  border: 1px solid darkgrey;
+  background-color: gainsboro;
+}
+.menu-btn {
+  float: right;
+  margin-top: 10px;
+}
+.menu-btn-show {
+  display: none;
+}
+.menu-btn button {
+  width: 25px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.menu-btn button i:hover {
+  color: darkgrey;
+}
+.menu-bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+.nav-link {
+  border: 1px solid darkgrey;
+  text-align: center;
+  text-decoration: none;
+}
+.nav-link:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-list-item {
+  display: none;
+}
+.section1,
+.section2,
+.section3 {
+  height: 200px;
+  padding: 5px;
+}
+.content-wrapper {
+  height: 190px;
+  padding: 5px;
+  border: 1px solid darkgrey;
+  background-color: gainsboro;
+}
+.content-header {
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.content-text {
+  font-size: 0.75rem;
+}
+.menu {
+  height: 70px;
+}
+.menu-title {
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.transition-2 {
+  transition: 2s width ease;
+}
+@media (max-width: 575px) {
+  .menu-btn-show,
+  .nav-list-item {
+    display: inline-block;
+  }
 }
