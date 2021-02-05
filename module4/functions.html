@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <h1>Functions as Objects</h1>
+  <ul>
+    <li>Basic Function</li>
+    <li>Function Factories</li>
+    <li>Pass Function as Argument</li>
+  </ul>
+  <script>
+    // Basic function
+    function multiple(x, y) {
+      return x * y
+    }
+    console.log(multiple(3, 5));
+
+    // Add property to function
+    console.log(multiple);  // Displays function code 
+    console.log(multiple.toString());  // Displays function code (using t0String())
+
+    multiple.version = '1.0.2'
+    console.log(multiple.version);
+
+    // Function Factories
+    // The multiplier parameter is pass into the makeMultiplier function
+    // A newFunction is created within makeMultiplier and returned
+    function makeMultiplier(multiplier) {
+      var newFunc = function (x) {
+        return multiplier * x;
+      };
+      return newFunc;
+    };
+
+    // Used makeMultiplier to make multiplyBy3 and doubleAll functions
+    multiplyBy3 = makeMultiplier(3);
+    console.log(multiplyBy3(10));
+
+    var doubleAll = makeMultiplier(2);
+    console.log(doubleAll(15));
+
+    //Pass Function as Argument
+    function doOperationOn(x, operation) {
+      return operation(x); // x is passed to the function used for operation
+      // () are used to execute the function and the the result is returned
+    };
+
+    var result = doOperationOn(5, multiplyBy3);
+    console.log(result);
+
+    result = doOperationOn(100, doubleAll);
+    console.log(result);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Values</title>
+</head>
+<body>
+  <h1>Passing values</h1>
+  <p>
+    Given a=b; when variable is passed by value change one variable doesn't affect the other
+  </p>
+  <p>
+    Given a=b; when variable is passed by reference change one variable  does affect the other
+  </p>
+  <p>
+    Primitive data types are passed by value, while objects are passed by reference
+  </p>
+
+  <script>
+    // Primitives
+    console.log('Primitive Passed by Value')
+    let a = 6;
+    let b = a;
+    console.log('Before change:', a, b);
+    a = 8;
+    console.log('After change:', a, b);
+
+    // Objects
+    console.log('Object Passed by Reference')
+    let c = {x: 7};
+    let d = c;
+    console.log('Before change:', c.x, d.x);
+    c.x = 5;
+    console.log('After change:', c.x, d.x);
+
+  </script>
+</body>
+</html>

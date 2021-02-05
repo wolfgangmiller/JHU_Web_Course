@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <h1>Objects in JavaScript</h1>
+  <ul>
+    <li>Use new Object()</li>
+    <li>Use object literal</li>
+  </ul>
+  <Script>
+    // Using new Object() 
+    console.log('Using new Object()\n');
+    company = new Object();
+    company.name = "Wolf Tracks LLC";
+    console.log(company.name);
+
+    // Object within object (need to define first)
+    company.programmer = new Object();
+    company.programmer.firstName = 'Maya';
+    company.programmer.lastName = 'Name';
+    console.log(`Programmer is ${company.programmer.firstName} ${company.programmer.lastName}`);
+
+    // Can also use bracket notation
+    console.log(`Company name: ${company['name']}`);
+
+    // Using Object Literals
+    console.log('Using Object Literals\n');
+    var personnel = {
+      seniorProgrammer: {
+        firstName: 'Maya',
+        lastName: 'Name'
+      },
+      Programmer1: {
+        firstName: 'Bill',
+        lastName: 'Smith'
+      },
+      Programmer2: {
+        firstName: 'Jane',
+        lastName: 'Doe'
+      }
+    };
+
+    console.log(`Lead programmer is ${personnel.seniorProgrammer.firstName}`);
+  </Script>
+</body>
+</html>
