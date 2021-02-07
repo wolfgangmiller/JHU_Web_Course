@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closures</title>
+</head>
+<body>
+  <h1>Working with Closures</h1>
+
+  <script>
+    // Closures
+    console.log('Use function factory again');
+    function makeMMultiplier(multiplier) {
+      // take argument and creates another function that is returned
+      // at this point argument is the same as var multiplier = 2
+      function b() {
+        // Function checks to see if variable defined local if not
+        // looks to parent function(s) lexical environment
+        console.log(`Multiplier in function b is ${multiplier}`);
+      }
+      b();
+
+      // This is not an execution of the function so no lexical environment
+      return (
+        // JavaScript preserves the function's outer lexical environment
+        function (x) {
+          return multiplier * x
+        }
+      );
+    };
+
+    var doubleAll = makeMMultiplier(2);
+    // executes here and get execution environment
+    // Doesn't see multiplier in it ex env so looks
+    // in outer lexical environment to find multiplier
+    console.log(`Double 10 is: ${doubleAll(10)}`); 
+
+  </script>
+</body>
+</html>

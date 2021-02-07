@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <h1>Working with Arrays</h1>
+
+  <script>
+    // Create new array via new constructor
+    var myArray = new Array();
+
+    myArray[0] = 'Maya';
+    myArray[1] = 2;
+    myArray[2] = function (name) {
+      console.log(`Hello ${name}`);
+    };
+    myArray[3] = {animal: 'dog'};
+
+    console.log(myArray);
+    console.log(myArray[1]);
+    myArray[2]('Peter');
+    myArray[2](myArray[0]);
+    console.log(myArray[3].animal);
+
+    // Shorthand Array notation
+    var names1 = ['Maya', 'Bill', 'Joe', 'Sally'];
+    console.log(names1);
+
+    console.log('Use for loop to step through array');
+    for (let index = 0; index < names1.length; index++) {
+      console.log(`Hello ${names1[index]}`);
+      
+    }
+
+    var names2 = ['Maya', 'George', 'Tom', 'Wally'];
+    console.log('\nUse for in to step through object');
+    var myObj = {
+      name: 'Maya',
+      position: 'senior programmer',
+      salary: 97000
+    };
+
+    // For x in object to step through object
+    for (var prop in myObj) {
+      console.log(prop + ': ' + myObj[prop]);
+    };
+    console.log('\nUse for in to step through array');
+    for (var name in names2) {
+      console.log(`Hello ${names2[name]}`);
+    }
+
+    console.log('\n Added greeting; just another property');
+    // Note that greeting become just another property of the array
+    names2.greeting = 'Hi';
+
+    for (var name in names2) {
+      console.log(`Hello ${names2[name]}`);
+    }
+
+  </script>
+</body>
+</html>

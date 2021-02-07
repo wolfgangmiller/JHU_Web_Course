@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literals</title>
+</head>
+<body>
+  <h1>Object Literals and 'This' Keyword</h1>
+
+  <script>
+    // Note that {} is the same as using 'new' keyword
+    var literalCircle1 = {
+      radius: 10,
+
+      getArea: function () {
+        return Math.PI * Math.pow(this.radius, 2);
+      }
+    };
+
+    console.log(literalCircle1.getArea());
+
+    // JavaScript bug - with function within function 
+    // inner 'this points to window object'
+    // self = this
+    var literalCircle1 = {
+      radius: 10,
+      
+      getArea: function () {
+        self = this;
+        var increaseRadius = function () {
+          self.radius = 20;
+        };
+
+        increaseRadius();
+
+        return Math.PI * Math.pow(this.radius, 2);
+      }
+    };
+
+    console.log(literalCircle1.getArea());
+
+
+
+
+  </script>
+</body>
+</html>

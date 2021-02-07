@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructors</title>
+</head>
+<body>
+  <h1>Constructors, Prototypes, and 'This' Keyword</h1>
+
+
+  <script>
+    // By default 'this' points to the global window object
+    function test() {
+      console.log(this);
+      this.myName = 'Maya';
+    };
+
+    test();
+    console.log(window.myName);
+
+    // Using a constructor function
+    // 'This' now point to the new object
+    function Circle(radius) {
+      this.radius = radius;    // Allows data to be store with object
+
+      // This function is created with every new Circle object
+      // this.getArea = function () {
+      //   return Math.PI * Math.pow(this.radius, 2);
+      // };
+    };
+
+    // Use Proto to create function once ane then reference
+    // Create outside of the constructor function
+    Circle.prototype.getArea = function () {
+      return Math.PI * Math.pow(this.radius, 2);
+    };
+
+    var Circle1 = new Circle(10);
+    console.log(Circle1.getArea());
+    var Circle2 = new Circle(20);
+    console.log(Circle2.getArea());
+  </script>
+</body>
+</html>
