@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Protocol</title>
+</head>
+<body>
+  <h1>HTTP Protocol</h1>
+  <p>Terms:</p>
+  <dt>HTTP: Hyper Text Transfer Protocol</dt>
+  <dd>A request and response stateless protocol.</dd>
+  <dt>URN: Uniform Resource Name</dt>
+  <dd>Uniquely identifies the resource or name of resource. Does not include information on resource location.</dd>
+  <dt>URI: Uniform Resource Identifier</dt>
+  <dd>Uniquely identifies resource or resource location. Still may not provide info on how to get to resource. Example: /kuma/index.html is the path, but the server name is missing</dd>
+  <dt>URL: Uniform Resource Locator</dt>
+  <dd>Uniquely identifies resource location. Provides both the server name and the path to the resource. Example: http://www.mysite.com/kuma/index.html</dd>
+  <h3>GET /index.html?firstName=Maya&lastName=Name http/1.1</h3>
+  <p>Reason no server is specified w/ GET is that the connection w/ the server must be established first</p>
+  <p>GET retrieves data from sever</p>
+  <p>POST send data to sever</p>
+  <p>
+    POST /index.html http/1.1 <br>
+    HOST: mysite.com <br>
+    Accept-Charset: utf-8 
+    firstName = Maya <br>
+    lastName = Name <br>
+  </p>
+  
+</body>
+</html>

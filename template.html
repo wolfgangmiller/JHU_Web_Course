@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/wolftrack.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/menu.css">
+  <!-- <script src="./scripts/menu.js"></script> -->
+  <title>Course Home</title>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#fff" stroke-width="2"/>
+          <path d="M0,14 30,14" stroke="#fff" stroke-width="2"/>
+          <path d="M0,23 30,23" stroke="#fff" stroke-width="2"/>
+        </svg>
+      </a>
+    </span>
+    <ul class="navbar-nav">
+      <li><a href="#" title="Current page">Home</a></li>
+      <li><a href="./module1/mod1.html" title="To HTML page">Into to HTML</a></li>
+      <li><a href="./module2/mod2.html" title="To CSS# page">Into to CSS3</a></li>
+      <li><a href="./module3/mod3.html" title="To Restaurant Project Part 1">Restaurant Site</a></li>
+      <li><a href="./module4/mod4.html" title="To JavaScript page">JavaScript Basics</a></li>
+      <li><a href="./module5/mod5.html" title="To Restaurant Project Part 2">JavaScript Application</a></li>
+    </ul>
+  </nav>
+  <!-- id used for JavaScript and class used for css -->
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="#" title="Current page">Home</a>
+    <a href="./module1/mod1.html" title="To HTML page">Into to HTML</a>
+    <a href="./module2/mod2.html" title="To CSS# page">Into to CSS3
+    <a href="./module3/mod3.html" title="To Restaurant Project Part 1">Restaurant Site</a>
+    <a href="./module4/mod4.html" title="To JavaScript page">JavaScript Basics</a>
+    <a href="./module5/mod5.html" title="To Restaurant Project Part 2">JavaScript Application</a>
+  </div>
+  <div id="main" class="main">
+    <h1 class="course-title">HTML, CSS, and Javascript for Web Developers</h1>
+    <h2 class="module-heading">Learning to use HTML, CSS, and Javascript</h2>
+    <div class="main-img">
+      <img src="./images/hjc.png" alt="HTML, CSS, and JavaScript Logos">
+    </div>
+  </div>
+
+  <footer id="footer" class="footer">Kwayzee Coder Copyright 2021</footer>
+
+  <script>
+    function openSlideMenu() {
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+      document.getElementById('footer').style.marginLeft = '250px';
+    }
+    function closeSlideMenu() {
+      document.getElementById('side-menu').style.width = '0px';
+      document.getElementById('main').style.marginLeft = '0px';
+      document.getElementById('footer').style.marginLeft = '0px';
+    }
+  </script>
+</body>
+</html>
