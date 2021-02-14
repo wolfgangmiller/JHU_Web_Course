@@ -28,7 +28,7 @@ a {
   text-decoration: none;
 }
 
-/* .header {
+.header {
   height: 125px;
   background-color: cadetblue;
 }
@@ -67,7 +67,7 @@ a {
 }
 .nav-link-active a {
   color: whitesmoke !important;
-}*/
+}
 .main {
   height: 85vh;
   margin: auto;
