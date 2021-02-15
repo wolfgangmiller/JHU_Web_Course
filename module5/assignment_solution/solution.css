@@ -17,11 +17,15 @@ body {
 }
 /* Assignment */
 .container {
-  background-color: darkseagreen;
+  background-color: oldlace;
 }
 .header {
   border: 1px solid darkgrey;
-  background-color: gainsboro;
+  background-color: teal;
+}
+.header h1 {
+  color: whitesmoke;
+  font-size: 1.75rem;
 }
 .menu-btn {
   float: right;
@@ -61,23 +65,75 @@ body {
 .section1,
 .section2,
 .section3 {
-  height: 200px;
+  /* height: 200px; */
   padding: 5px;
 }
-.content-wrapper {
-  height: 190px;
+.content-wrapper1,
+.content-wrapper2,
+.content-wrapper3 {
+  /* height: 190px; */
   padding: 5px;
   border: 1px solid darkgrey;
-  background-color: gainsboro;
+  background-color: #9c528b;
 }
-.content-header {
+.content-header1,
+.content-header2,
+.content-header3 {
   margin: 10px;
+  color: whitesmoke;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
-.content-text {
+.content-text1,
+.content-text2,
+.content-text3 {
+  height: 75px;
+  padding: 5px;
+  background-color: whitesmoke;
   font-size: 0.75rem;
+}
+.img-wrapper1,
+.img-wrapper2,
+.img-wrapper3 {
+  position: relative;
+  margin-bottom: 5px;
+}
+.img-wrapper1 img,
+.img-wrapper2 img,
+.img-wrapper3 img {
+  width: 100%;
+  margin: auto;
+}
+.price-wrapper1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  text-align: center;
+}
+.price-wrapper2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  text-align: center;
+}
+.price-wrapper3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  text-align: center;
 }
 .menu {
   height: 70px;
@@ -92,7 +148,8 @@ body {
   margin-top: 10px;
   padding: 5px 0;
   border: 1px solid darkgrey;
-  background-color: gainsboro;
+  background-color: #333;
+  color: whitesmoke;
   text-align: center;
 }
 .transition-2 {
