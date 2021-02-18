@@ -1,80 +1,49 @@
-// document.addEventListener('DOMContentLoaded',
-//   function (event) {
-//     var self = this;
-//     var name = '';
-//     // call server to get name from text file
-//     $ajaxUtils.sendGetRequest('./data/sandwiches.json', function (request) {
-//     self.data = request.JSON.parse() responseText;
+document.addEventListener('DOMContentLoaded',
+  function (event) {
+    // Retrieve JSON data on page load
+    var self = this;
+    const url = 'http://127.0.0.1:5500/module5/assignment_solution/data/sandwiches.json';
+    // call server to get name from text file
+    //  initialize a new XMLHttpRequest() method
+    const data = new XMLHttpRequest();
+    // specify the URL endpoint and HTTP GET method  
+    data.open("GET", url);
+    // Send request
+    data.send(null);
 
-//     console.log(`Within request: ${self.name}`);
-    // update content selector with name
-    // Because ajax is async everything must be in request call
-
-
-var data = {
-  "Sandwiches": [
-    {
-      "Name": "Fried Chicken Sandwich",
-      "Description": "This Fried Chicken sandwich is THE BEST! It really doesn’t get much better than crispy and juicy fried chicken on a toasted bun with a smoky paprika sauce.",
-      "ImageURL": "../assignment_solution/images/chicken.jpg",
-      "Price": "$7.50"
-    },
-    {
-      "Name": "French Dip Sandwich",
-      "Description": "Try our French Dip sandwich with a mouthwatering jus! Stuffing fresh bread rolls with tender beef along with melted provolone cheese, then dipping it into a perfect au jus.",
-      "ImageURL": "./images/chicken.jpg",
-      "Price": "$9.50"
-    },
-    {
-      "Name": "Cubano Sandwich",
-      "Description": "Our Cubano sandwich is a combination of flavorful, juicy pork, Swiss cheese, pickles, mustard, and Cuban bread makes this dish an undeniable hit.",
-      "ImageURL": "../mod5/assignment_solution/images/",
-      "Price": "$8.50"
-    }
-  ]
-}
-
-console.log(data.Sandwiches[0].Name);
-
-    document.querySelector('#item-name').innerHTML = `<h2>Sandwich is ${data.Sandwiches[0].Name}!</2>`;
-
-    document.querySelector('#item-descr').innerHTML = `${data.Sandwiches[0].Description}`;
-
-    document.querySelector('#item-img').innerHTML = `<img src="${data.Sandwiches[0].ImageURL}" alt="Fried Chicken Sandwich">`
-
-    document.querySelector('#item-price').innerHTML = `Price: ${data.Sandwiches[0].Price}`
-//   });
-
-//   }
-// );
-
-
-// function sayHello(event) {
-//   this.textContent = 'Said it';
-//   let name = document.getElementById('name').value;
-//   let title = document.querySelector('#title').textContent;
-
-//   if (name.toLowerCase() === 'student') {
-//     document.getElementById('content').innerHTML = `<h3>Hello ${title} ${name}!</h3>`;
-//   } else {
-//     document.getElementById('content').innerHTML = `<h3>Hello ${name}!</h3>`;
-//   }
-// }
-// document.querySelector('button').addEventListener('click', sayHello);
+    data.onreadystatechange = function () {
+      // XMLHttpRequest.readyState returns 4 
+      // Unsent = 0 The XMLHttpRequest client has been created, but the open() method hasn't been called yet.
+      // Opened = 1 open() method has been invoked.
+      // Headers_Received = 2 Send() has been called and the response headers have been received.
+      // Loading = 3 Response's body is being received. 
+      // Done = 4 = Operation complete
+      if (this.readyState == 4  && this.status == 200) {
+        // Parse the JSON string
+        var menuData = JSON.parse(this.responseText);
+        console.log(menuData);
+        displaySandwiches(menuData);
+        
+      }
+    };
+  } 
+);
 
 
 
-// document.querySelector('button').addEventListener('click', function () {
-//   var self = this;
-//   var name = '';
+function displaySandwiches(data) {
+  // Display information about the chicken sandwich
+  
+  console.log(data);
 
-//   // call server to get name from text file
-//   $ajaxUtils.sendGetRequest('../module5/data/name.txt', function (request) {
-//     self.name = request.responseText;
+  document.querySelector('#item-name').innerHTML = `<h2>Sandwich is ${data.Sandwiches[0].Name}!</2>`;
 
-//     console.log(`Within request: ${self.name}`);
-//     // update content selector with name
-//     // Because ajax is async everything must be in request call
-//     document.querySelector('#content').innerHTML = `<h2>Hi, my name is ${self.name}!`;
-//   });
-// });
+  document.querySelector('#item-descr').innerHTML = `${data.Sandwiches[0].Description}`;
+
+  document.querySelector('#item-img').innerHTML = `<img src="${data.Sandwiches[0].ImageURL}" alt="Fried Chicken Sandwich">`;
+
+  document.querySelector('#item-price').innerHTML = `Price: ${data.Sandwiches[0].Price}`;
+
+};
+
+
