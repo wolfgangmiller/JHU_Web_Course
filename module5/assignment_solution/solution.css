@@ -7,6 +7,16 @@
 /*  Base font family */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+/* Custom variables */
+:root {
+  --primary-color: #9c528b;
+  --secondary-color: teal;
+  --dark-color: #1d1e2c;
+  --light-color: darkgrey;
+  --text-dark-color: #1d1e2c;
+  --text-light-color: whitesmoke;
+}
+
 /* Base style */
 body {
   font-family: "Roboto", sans-serif;
@@ -17,14 +27,14 @@ body {
 }
 /* Assignment */
 .container {
-  background-color: oldlace;
+  background-color: #d7cdcc;
 }
 .header {
-  border: 1px solid darkgrey;
-  background-color: teal;
+  border: 1px solid var(--light-color);
+  background-color: var(--secondary-color);
 }
 .header h1 {
-  color: whitesmoke;
+  color: var(--text-light-color);
   font-size: 1.75rem;
 }
 .menu-btn {
@@ -42,20 +52,19 @@ body {
   outline: none;
 }
 .menu-btn button i:hover {
-  color: darkgrey;
+  color: var(--text-light-color);
 }
-.menu-bar {
-  width: 35px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 0;
+.navbar-header i {
+  margin-right: 25px;
 }
 .nav-link {
-  border: 1px solid darkgrey;
+  border: 1px solid var(--light-color);
+  color: #1d1e2c;
   text-align: center;
   text-decoration: none;
 }
 .nav-link:hover {
+  color: #1d1e2c;
   font-weight: bold;
   text-decoration: none;
 }
@@ -73,14 +82,14 @@ body {
 .content-wrapper3 {
   /* height: 190px; */
   padding: 5px;
-  border: 1px solid darkgrey;
-  background-color: #9c528b;
+  border: 1px solid var(--light-color);
+  background-color: var(--primary-color);
 }
 .content-header1,
 .content-header2,
 .content-header3 {
   margin: 10px;
-  color: whitesmoke;
+  color: var(--text-light-color);
   text-align: center;
   font-size: 1.25rem;
   font-weight: bold;
@@ -112,7 +121,7 @@ body {
   width: 100%;
   height: 25px;
   background-color: rgba(51, 51, 51, 0.8);
-  color: #fff;
+  color: var(--text-light-color);
   text-align: center;
 }
 .price-wrapper2 {
@@ -122,7 +131,7 @@ body {
   width: 100%;
   height: 25px;
   background-color: rgba(51, 51, 51, 0.8);
-  color: #fff;
+  color: var(--text-light-color);
   text-align: center;
 }
 .price-wrapper3 {
@@ -132,7 +141,7 @@ body {
   width: 100%;
   height: 25px;
   background-color: rgba(51, 51, 51, 0.8);
-  color: #fff;
+  color: var(--text-light-color);
   text-align: center;
 }
 .menu {
@@ -147,13 +156,48 @@ body {
 .footer {
   margin-top: 10px;
   padding: 5px 0;
-  border: 1px solid darkgrey;
-  background-color: #333;
-  color: whitesmoke;
+  border: 1px solid var(--light-color);
+  background-color: #1d1e2c;
+  color: var(--text-light-color);
   text-align: center;
+}
+
+.footer-hours {
+  margin: 5px 15px 0 0;
+  flex-basis: 30%;
+  text-align: left;
+}
+.footer-contact {
+  margin-top: 5px;
+  flex-basis: 30%;
+  padding: 5px;
+  text-align: left;
+}
+.social i {
+  color: var(--text-light-color);
+}
+.fa-instagram,
+.fa-twitter {
+  margin-left: 20px;
+}
+.map-info {
+  margin-top: 5px;
+  flex-basis: 30%;
+}
+.map-info h4 {
+  text-align: left;
+}
+.footer-copyright {
+  margin: 5px 0;
 }
 .transition-2 {
   transition: 2s width ease;
+}
+@media (min-width: 900px) {
+  .footer-info-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 @media (max-width: 575px) {
   .menu-btn-show,
