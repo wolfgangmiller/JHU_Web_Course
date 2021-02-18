@@ -3,19 +3,19 @@
     {
       "Name": "Fried Chicken Sandwich",
       "Description": "This Fried Chicken sandwich is THE BEST! It really doesn’t get much better than crispy and juicy fried chicken on a toasted bun with a smoky paprika sauce.",
-      "ImageURL": "../mod5/assignment_solution/images/",
+      "ImageURL": "../assignment_solution/images/chicken.jpg",
       "Price": "$7.50"
     },
     {
       "Name": "French Dip Sandwich",
       "Description": "Try our French Dip sandwich with a mouthwatering jus! Stuffing fresh bread rolls with tender beef along with melted provolone cheese, then dipping it into a perfect au jus.",
-      "ImageURL": "../mod5/assignment_solution/images/",
+      "ImageURL": "../assignment_solution/images/beef.jpg",
       "Price": "$9.50"
     },
     {
       "Name": "Cubano Sandwich",
       "Description": "Our Cubano sandwich is a combination of flavorful, juicy pork, Swiss cheese, pickles, mustard, and Cuban bread makes this dish an undeniable hit.",
-      "ImageURL": "../mod5/assignment_solution/images/",
+      "ImageURL": "../assignment_solution/images/pork.jpg",
       "Price": "$8.50"
     }
   ]
